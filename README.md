@@ -8,12 +8,12 @@ A jQuery plugin that hides and shows &lt;options> in a &lt;select> element
 
 Sample HTML:
 
-    &lt;select id="colors">
-      &lt;option>Choose a color...&lt;/option>
-      &lt;option value="red">Red&lt;/option>
-      &lt;option value="green">Green&lt;/option>
-      &lt;option value="blue">Blue&lt;/option>
-    &lt;/select>
+    <select id="colors">
+      <option>Choose a color...</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
 
 Javascript:
 
