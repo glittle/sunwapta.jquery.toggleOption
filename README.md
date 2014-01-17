@@ -31,7 +31,7 @@ JavaScript:
 
 ## Discussion:
 
-When `hideOption` is used, this plugin will physically remove the `<option>`` element from the DOM.
+When `hideOption` is used, this plugin will physically remove the `<option>` element from the DOM.
 
 When `showOption` is used to show it again, the `<option>` is re-inserted into the same location in the list.
 
