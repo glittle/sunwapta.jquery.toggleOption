@@ -1,0 +1,41 @@
+{
+	"name": "sunwapta.toggleOption",
+	"version": "1.0.0",
+	"title": "Toggle Dropdown Options",
+	"description": "jQuery plugin that hides and shows <options> in a <select> elements",
+	"keywords": [
+		"select",
+		"option",
+		"hide",
+		"show"
+		],
+	"author": {
+		"name": "Glen Little",
+		"email": "glittle@sunwaptasolutions.com",
+		"url": "http://www.sunwaptasolutions.com"
+		},
+	"maintainers": [
+			{
+				"name": "Glen Little",
+				"email": "glittle@sunwaptasolutions.com",
+				"url": "http://www.sunwaptasolutions.com"
+			},
+			{
+				"name": "Justin Bicknell",
+				"email": "jbicknell@sunwaptasolutions.com",
+				"url": "http://www.sunwaptasolutions.com"
+			}
+		],
+	"licenses": [
+			{
+				"type": "MIT",
+				"url": "http://www.opensource.org/licenses/MIT"
+			}
+		],
+	"bugs": "https://github.com/glittle/sunwapta.jquery.toggleOption/issues",
+	"homepage": "https://github.com/glittle/sunwapta.jquery.toggleOption",
+	"docs": "https://github.com/glittle/sunwapta.jquery.toggleOption",
+	"dependencies": {
+		"jquery": ">=1.7"
+	}
+}
