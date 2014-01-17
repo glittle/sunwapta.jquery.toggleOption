@@ -1,6 +1,6 @@
 {
 	"name": "sunwapta.toggleOption",
-	"version": "1.0.3",
+	"version": "1.0.0",
 	"title": "Toggle Dropdown Options",
 	"description": "jQuery plugin that hides and shows <options> in a <select> elements",
 	"keywords": [
