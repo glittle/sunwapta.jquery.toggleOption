@@ -2,11 +2,15 @@
   $.fn.toggleOption = function (value, show) {
     /// <summary>Show or hide the desired option</summary>
     return this.filter('select').each(function () {
+      var select = $(this);
+      if (typeof show === 'undefined') {
+        show = !select.find('option[value="' + value + '"]').eq(0).is(':visible');
+      }
       if (show) {
-        $(this).showOption(value);
+        select.showOption(value);
       }
       else {
-        $(this).hideOption(value);
+        select.hideOption(value);
       }
     });
   };

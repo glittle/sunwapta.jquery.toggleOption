@@ -27,7 +27,7 @@ JavaScript:
     $('#colors').hideOption('green');
     $('#colors option').length == 3; // true
 
-    // show it again!
+    // show it again
     $('#colors').showOption('green');
     $('#colors option').length == 4; // true
 ```
@@ -39,10 +39,10 @@ There are three functions: `hideOption()`, `showOption()`, `toggleOption()`
 ```JavaScript
     $('#mySelect').hideOption(value); 
     $('#mySelect').showOption(value);
-    $('#mySelect').toggleOption(value, show);
+    $('#mySelect').toggleOption(value, [show]);
 ```
 *   `value` is a string - the text `value` of the `option`
-*   `show` is a truthy boolean - if true, the `option` will be shown, if false, the `option` will be hidden
+*   `show` is a truthy boolean - if true, the `option` will be shown, if false, the `option` will be hidden. If not provided, the `option` will be toggled from what it is now.
 
 
 ## Discussion:
@@ -54,6 +54,8 @@ Use `hideOption()` when you want to hide an `<option>` from a `<select>` element
 Then use `showOption()` to show it again.  The `<option>` will be re-inserted into the same location in the `select` as it was at before - the sort order of the options is maintained.
 
 You can also use `toggleOption()` to make the option toggle - if it is showing, it will be hidden, and vice-versa.
+
+You can see a working sample as a []jsFiddle: Toggle Dropdown Options](jsfiddle.net/glittle/RvGTc/).
 
 ## Technical Notes:
 
