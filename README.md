@@ -1,8 +1,8 @@
-# Toggle `Select` Options
+# Toggle Dropdown Options
 
 ## Description
 
-A jQuery plugin that hides and shows `<option>` elements in a `<select>`.
+A jQuery plugin that hides and shows `<option>` elements in a `<select>` dropdown element.
 
 ## Usage
 
