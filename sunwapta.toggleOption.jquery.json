@@ -1,6 +1,6 @@
 {
 	"name": "sunwapta.toggleOption",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"title": "Toggle Dropdown Options",
 	"description": "Hides and shows <options> in a <select> elements in all browsers. (Other methods do not work in all browsers!)",
 	"keywords": [
@@ -35,6 +35,7 @@
 	"bugs": "https://github.com/glittle/sunwapta.jquery.toggleOption/issues",
 	"homepage": "https://github.com/glittle/sunwapta.jquery.toggleOption",
 	"docs": "https://github.com/glittle/sunwapta.jquery.toggleOption",
+	"demo": "http://jsfiddle.net/glittle/RvGTc",
 	"dependencies": {
 		"jquery": ">=1.7"
 	}
