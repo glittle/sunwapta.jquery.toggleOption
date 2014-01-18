@@ -52,7 +52,14 @@ It works in all browsers.
 
 ## Technical Notes:
 
-*   When `hideOption` is called, `[detach][http://api.jquery.com/detach/]` is used to remove the `option` from the DOM.
+*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already shown.
+
+*   All the options must be present in the DOM before `hideOption` or `toggleOption` is first called.  If new 
+
+*   This can be used a number of elements at the same time.
+```JavaScript
+    $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
+```
 
 *   If you have added jQuery `data` values to the `option`, they are not lost when `hideOption` and `showOption` are 
 used.
@@ -66,17 +73,11 @@ used.
     $('#pickYear').showOption('2014').data('holidays') == 9;  // true - the value is still there
 ```
 
-*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already shown.
+*   When `hideOption` is called, [detach()][http://api.jquery.com/detach/] is used to remove the `option` from the DOM.  It is later attached with `after()`, `before()`, or `prepend()` as needed.
 
-*   All the options must be present in the DOM before `hideOption` or `toggleOption` is first called.  If new 
+## Why is this Needed?
 
-*   This can be used a number of elements at the same time.
-```JavaScript
-    $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
-```
-
-*   In some browsers, options can be hidden using CSS, as shown here, but that does not work in Internet Explorer! Using this plug-in works everywhere and 
-is very simple to use.
+In some browsers, options can be hidden using CSS, as shown here, but **that does not work** in some browsers, like Internet Explorer!
 ```HTML
     <select id="colors">
       <option>Choose a color...</option>
@@ -85,7 +86,7 @@ is very simple to use.
       <option value="blue">Blue</option>
     </select>
 ```
-
+Using this plug-in works everywhere and is very simple to use.
 
 
 
