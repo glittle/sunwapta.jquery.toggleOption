@@ -20,43 +20,48 @@ Sample HTML:
 JavaScript:
 
 ```JavaScript
+    // confirm that we have 4 options
     $('#colors option').length == 4; // true
 
+    // hide the green one
     $('#colors').hideOption('green');
     $('#colors option').length == 3; // true
 
+    // show it again!
     $('#colors').showOption('green');
     $('#colors option').length == 4; // true
 ```
 
 ## Syntax:
 
+There are three functions: `hideOption()`, `showOption()`, `toggleOption()`
+
 ```JavaScript
     $('#mySelect').hideOption(value); 
     $('#mySelect').showOption(value);
     $('#mySelect').toggleOption(value, show);
-    
-    // value is a string - the text value of the option
-    // show is a boolean - if true, option will be shown, if false, option will be hidden
 ```
+*   `value` is a string - the text `value` of the `option`
+*   `show` is a truthy boolean - if true, the `option` will be shown, if false, the `option` will be hidden
+
 
 ## Discussion:
 
-Use `hideOption()` when you want to hide an `<option>` from the `<select>` element.  
+It works in all browsers.
+
+Use `hideOption()` when you want to hide an `<option>` from a `<select>` element.  
 
 Then use `showOption()` to show it again.  The `<option>` will be re-inserted into the same location in the `select` as it was at before - the sort order of the options is maintained.
 
 You can also use `toggleOption()` to make the option toggle - if it is showing, it will be hidden, and vice-versa.
 
-It works in all browsers.
-
 ## Technical Notes:
 
-*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already shown.
+*   All the options should be present in the DOM before `hideOption` or `toggleOption` is first called.
 
-*   All the options must be present in the DOM before `hideOption` or `toggleOption` is first called.  If new 
+*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already showing.
 
-*   This can be used a number of elements at the same time.
+*   This can be used on a number of elements at the same time.
 ```JavaScript
     $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
 ```
@@ -66,11 +71,11 @@ used.
 ```JavaScript
     $('#pickYear option[value=2014]').data('holidays', 9);  // store a value into data
 
-    $('#pickYear').hideOption('2014');  // hide it
+    $('#pickYear').toggleOption('2014');  // hide it
     $('#pickYear option[value=2014]').length == 0; // it's really gone!
 
-    $('#pickYear').showOption('2014');  // show it
-    $('#pickYear').showOption('2014').data('holidays') == 9;  // true - the value is still there
+    $('#pickYear').toggleOption('2014');  // show it
+    $('#pickYear option[value=2014]').data('holidays') == 9;  // true - the value is still there
 ```
 
 *   When `hideOption` is called, [detach()][http://api.jquery.com/detach/] is used to remove the `option` from the DOM.  It is later attached with `after()`, `before()`, or `prepend()` as needed.
