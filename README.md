@@ -59,9 +59,9 @@ You can see a working sample as a []jsFiddle: Toggle Dropdown Options](jsfiddle.
 
 ## Technical Notes:
 
-*   All the options should be present in the DOM before `hideOption()` or `toggleOption()` is first called.
-
 *   It does not matter if you call `hideOption()` when it is already hidden, or `showOption()` when it is already showing.
+
+*   All the options should be present in the DOM before `hideOption()` or `toggleOption()` is first called. If you need to repopulate the `select`, call `$('#select').data('optionsModified', null)` to reset before hiding `options` again.
 
 *   This can be used on a number of elements at the same time.
 ```JavaScript
