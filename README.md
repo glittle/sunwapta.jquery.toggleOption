@@ -2,7 +2,7 @@
 
 ## Description
 
-A jQuery plugin that hides and shows &lt;option> element in a &lt;select>.
+A jQuery plugin that hides and shows `<option>` elements in a `<select>`.
 
 ## Usage
 
@@ -32,11 +32,11 @@ JavaScript:
 ## Syntax:
 
 ```JavaScript
-    $('#mySelect').hideOption(valueName); 
-    $('#mySelect').showOption(valueName);
-    $('#mySelect').toggleOption(valueName, show);
+    $('#mySelect').hideOption(value); 
+    $('#mySelect').showOption(value);
+    $('#mySelect').toggleOption(value, show);
     
-    // valueName is the value of the option
+    // value is a string - the text value of the option
     // show is a boolean - if true, option will be shown, if false, option will be hidden
 ```
 
@@ -52,30 +52,31 @@ It works in all browsers.
 
 ## Technical Notes:
 
-When `hideOption` is called, `[detach][http://api.jquery.com/detach/]` is used to remove the `option` from the DOM.
+*   When `hideOption` is called, `[detach][http://api.jquery.com/detach/]` is used to remove the `option` from the DOM.
 
-If you have added jQuery `data` values to the `option`, they are not lost when `hideOption` and `showOption` are 
+*   If you have added jQuery `data` values to the `option`, they are not lost when `hideOption` and `showOption` are 
 used.
 ```JavaScript
-    $('#pickYear option[value=2014]').data('holidays', 9);
+    $('#pickYear option[value=2014]').data('holidays', 9);  // store a value into data
 
-    $('#pickYear').hideOption('2014');  // hidden
-
+    $('#pickYear').hideOption('2014');  // hide it
     $('#pickYear option[value=2014]').length == 0; // it's really gone!
 
-    $('#pickYear').showOption('2014');  // it's back
-
-    $('#pickYear').showOption('2014'),data('holidays') == 9;  // true
+    $('#pickYear').showOption('2014');  // show it
+    $('#pickYear').showOption('2014').data('holidays') == 9;  // true - the value is still there
 ```
 
-It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already shown.
+*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already shown.
 
-This can be used a number of elements at the same time.
+*   All the options must be present in the DOM before `hideOption` or `toggleOption` is first called.  If new 
+
+*   This can be used a number of elements at the same time.
 ```JavaScript
     $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
 ```
 
-In some browsers, options can be hidden using CSS, as shown here, but it will fail in Internet Explorer.
+*   In some browsers, options can be hidden using CSS, as shown here, but that does not work in Internet Explorer! Using this plug-in works everywhere and 
+is very simple to use.
 ```HTML
     <select id="colors">
       <option>Choose a color...</option>
@@ -84,6 +85,8 @@ In some browsers, options can be hidden using CSS, as shown here, but it will fa
       <option value="blue">Blue</option>
     </select>
 ```
+
+
 
 
 
