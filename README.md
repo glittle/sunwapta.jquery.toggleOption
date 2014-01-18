@@ -75,7 +75,15 @@ This can be used a number of elements at the same time.
     $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
 ```
 
-
+In some browsers, options can be hidden using CSS, as shown here, but it will fail in Internet Explorer.
+```HTML
+    <select id="colors">
+      <option>Choose a color...</option>
+      <option value="red">Red</option>
+      <option style="display:none" value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+```
 
 
 
