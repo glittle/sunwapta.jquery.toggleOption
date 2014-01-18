@@ -57,16 +57,16 @@ You can also use `toggleOption()` to make the option toggle - if it is showing, 
 
 ## Technical Notes:
 
-*   All the options should be present in the DOM before `hideOption` or `toggleOption` is first called.
+*   All the options should be present in the DOM before `hideOption()` or `toggleOption()` is first called.
 
-*   It does not matter if you call `hideOption` when it is already hidden, or `showOption` when it is already showing.
+*   It does not matter if you call `hideOption()` when it is already hidden, or `showOption()` when it is already showing.
 
 *   This can be used on a number of elements at the same time.
 ```JavaScript
     $('#firstSelect, .MainSelects').hideOption('add');  // will remove all <option value="add">....</option> from the matched <select> elements.
 ```
 
-*   If you have added jQuery `data` values to the `option`, they are not lost when `hideOption` and `showOption` are 
+*   If you have added jQuery `data` values to the `option`, they are not lost when `hideOption()` and `showOption()` are 
 used.
 ```JavaScript
     $('#pickYear option[value=2014]').data('holidays', 9);  // store a value into data
@@ -78,7 +78,7 @@ used.
     $('#pickYear option[value=2014]').data('holidays') == 9;  // true - the value is still there
 ```
 
-*   When `hideOption` is called, [detach()][http://api.jquery.com/detach/] is used to remove the `option` from the DOM.  It is later attached with `after()`, `before()`, or `prepend()` as needed.
+*   When `hideOption()` is called, [detach()](http://api.jquery.com/detach/) is used to remove the `option` from the DOM.  It is later attached with `after()`, `before()`, or `prepend()` as needed.
 
 ## Why is this Needed?
 
