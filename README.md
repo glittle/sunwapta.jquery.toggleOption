@@ -1,4 +1,4 @@
-# Toggle Dropdown Options
+# Toggle `Select` Options
 
 ## Description
 
