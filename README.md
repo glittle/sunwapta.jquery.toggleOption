@@ -55,7 +55,7 @@ Then use `showOption()` to show it again.  The `<option>` will be re-inserted in
 
 You can also use `toggleOption()` to make the option toggle - if it is showing, it will be hidden, and vice-versa.
 
-You can see a working sample as a []jsFiddle: Toggle Dropdown Options](jsfiddle.net/glittle/RvGTc/).
+You can see a working sample at jsFiddle: [Toggle Dropdown Options Sample](http://jsfiddle.net/glittle/RvGTc/).
 
 ## Technical Notes:
 

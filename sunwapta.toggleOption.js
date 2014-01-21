@@ -4,7 +4,7 @@
     return this.filter('select').each(function () {
       var select = $(this);
       if (typeof show === 'undefined') {
-        show = !select.find('option[value="' + value + '"]').eq(0).is(':visible');
+        show = select.find('option[value="' + value + '"]').length == 0;
       }
       if (show) {
         select.showOption(value);
@@ -18,8 +18,8 @@
     /// <summary>Show the desired option in the location it was in when hideOption was first used</summary>
     return this.filter('select').each(function () {
       var select = $(this);
-      var testOpt = select.find('option[value="' + value + '"]').eq(0);
-      if (testOpt.length) return; // already there
+      var found = select.find('option[value="' + value + '"]').length != 0;
+      if (found) return; // already there
 
       var info = select.data('opt' + value);
       if (!info) return; // abort... hideOption has not been used yet
