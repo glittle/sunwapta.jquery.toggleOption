@@ -1,6 +1,6 @@
 {
 	"name": "sunwapta.toggleOption",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"title": "Toggle Dropdown Options",
 	"description": "Hides and shows <options> in a <select> elements in all browsers. (Other methods do not work in all browsers!)",
 	"keywords": [
